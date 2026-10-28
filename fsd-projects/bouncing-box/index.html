@@ -82,6 +82,14 @@ var speed = 10;
          * If the box drifts off the screen, turn it around!
          */
         function update() {
+          if (exampleVariable > boardWidth) {
+  speed *= -1;
+}
+if (exampleVariable < 0) {
+ speed *= -1;
+
+}
+
 exampleVariable += speed;
 
         moveBoxTo(exampleVariable); 
@@ -100,7 +108,8 @@ exampleVariable += speed;
         function handleBoxClick() {
 exampleVariable = 0;
 points++;
-speed += 3;
+speed = 3 * points + 10;
+
 
 
 
